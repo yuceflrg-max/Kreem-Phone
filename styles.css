@@ -45,6 +45,7 @@ a {
   background: rgba(251, 247, 236, 0.92);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
+  overflow: hidden;
 }
 
 .brand {
@@ -987,8 +988,20 @@ a {
   display: block;
 }
 .brand-logo {
-  width: 11px;
-  height: 6px;
+  position: relative;
+  display: grid;
+  flex: 0 0 132px;
+  width: 132px !important;
+  max-width: 132px !important;
+  height: 64px !important;
+  max-height: 64px !important;
+  place-items: center;
+  overflow: hidden;
+  background: var(--green-950);
+  border: 1px solid rgba(213, 166, 70, 0.45);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(5, 30, 25, 0.14);
+
 }
   display: grid;
   width: 52px;
@@ -1000,10 +1013,14 @@ a {
   box-shadow: 0 10px 26px rgba(213, 166, 70, 0.36);
 }
 
-.brand-logo img {   display: block;   width: 100%;   height: 100%;   padding: 2px;   object-fit: contain; }
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 6px;
-  display: block;
+.brand-logo img {
+  position: absolute !important;
+  inset: 3px !important;
+  display: block !important;
+  width: calc(100% - 6px) !important;
+  max-width: 100% !important;
+  height: calc(100% - 6px) !important;
+  max-height: 100% !important;
+  padding: 0;
+  object-fit: contain !important;
 }
