@@ -988,11 +988,19 @@ a {
   display: block;
 }
 .brand-logo {
-  flex-basis: 96px;
-  width: 96px !important;
-  max-width: 96px !important;
-  height: 48px !important;
-  max-height: 48px !important;
+  position: relative;
+  display: grid;
+  flex: 0 0 132px;
+  width: 132px !important;
+  max-width: 132px !important;
+  height: 64px !important;
+  max-height: 64px !important;
+  place-items: center;
+  overflow: hidden;
+  background: var(--green-950);
+  border: 1px solid rgba(213, 166, 70, 0.45);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(5, 30, 25, 0.14);
 }
   display: grid;
   width: 52px;
